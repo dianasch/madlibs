@@ -1,10 +1,8 @@
-<!doctype html>
-<html>
-<head>
-  <title>A Madlib</title>
-    <link rel="stylesheet" href="static/madlibs.css">
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}A Madlib{% endblock%}
+
+{% block content %}
   <p>
     What do you get when you cross a {{ color }} {{ noun }} with a
     {{ person }}? You get a 
@@ -13,5 +11,4 @@
     {% endfor %}
     {{ noun }}.
   </p> 
-</body>
-</html>
+{% endblock %}

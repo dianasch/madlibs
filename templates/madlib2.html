@@ -1,16 +1,13 @@
-<!doctype html>
-<html>
-<head>
-  <title>A Madlib</title>
-    <link rel="stylesheet" href="static/madlibs.css">
-</head>
-<body>
-  <p>
-    One day, a {{ color }} {{ noun }} was walking somewhere.
-    A {{ person }} saw the {{ noun}} and felt 
-    {% for adjective in adjectives %}
-        {{adjective}}
-    {% endfor %}.
-  </p> 
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %} A Madlib {% endblock %}
+
+{% block content %}
+    <p>
+        One day, a {{ color }} {{ noun }} was walking somewhere.
+        A {{ person }} saw the {{ noun}} and felt 
+        {% for adjective in adjectives %}
+            {{adjective}}
+        {% endfor %}.
+    </p>
+{% endblock %}
