@@ -61,7 +61,9 @@ def show_madlib():
     noun = request.args.get("noun")
     adjectives = request.args.getlist("adjective")
 
-    return render_template("madlib.html", person=person, 
+    madlib_files = ["madlib.html", "madlib2.html", "madlib3.html"]
+
+    return render_template(choice(madlib_files), person=person, 
                                           color=color, 
                                           noun=noun,
                                           adjectives=adjectives)
