@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <title>A Madlib</title>
+    <link rel="stylesheet" href="static/madlibs.css">
+</head>
+<body>
+  <p>
+    What do you get when you cross a {{ color }} {{ noun }} with a
+    {{ person }}? You get a 
+    {% for adjective in adjectives %}
+        {{adjective}}
+    {% endfor %}
+    {{ noun }}.
+  </p> 
+</body>
+</html>
